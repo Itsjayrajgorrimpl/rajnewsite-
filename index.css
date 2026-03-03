@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 25% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 10%;
+
+    --primary: 0 72% 40%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 0 65% 55%;
+
+    --secondary: 216 30% 97%;
+    --secondary-foreground: 220 25% 10%;
+
+    --muted: 216 20% 95%;
+    --muted-foreground: 220 10% 46%;
+
+    --accent: 216 30% 97%;
+    --accent-foreground: 220 25% 10%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 0 72% 40%;
+
+    --radius: 0.625rem;
+
+    --navy: 222 47% 11%;
+    --navy-foreground: 0 0% 100%;
+    --navy-light: 222 30% 18%;
+    --steel: 220 15% 65%;
+    --steel-light: 216 30% 97%;
+
+    --hero-bg: 216 40% 97%;
+    --glass: 0 0% 100% / 0.7;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+    @apply tracking-tight;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(0, 72%, 40%), hsl(0, 58%, 52%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-light {
+    background: linear-gradient(135deg, hsl(0, 72%, 55%), hsl(0, 60%, 70%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-grid {
+    background-image:
+      linear-gradient(hsl(220 13% 91% / 0.5) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(220 13% 91% / 0.5) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .bg-dot-pattern {
+    background-image: radial-gradient(hsl(220 13% 91% / 0.8) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .bg-noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  }
+
+  .glass-card {
+    background: hsl(var(--glass));
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  .glass-header {
+    background: hsl(0 0% 100% / 0.85);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+  }
+
+  .shadow-premium {
+    box-shadow:
+      0 0 0 1px hsl(220 13% 91% / 0.7),
+      0 1px 2px hsl(220 25% 10% / 0.04),
+      0 4px 12px -2px hsl(220 25% 10% / 0.06),
+      0 12px 36px -8px hsl(220 25% 10% / 0.08);
+  }
+
+  .shadow-premium-hover {
+    box-shadow:
+      0 0 0 1px hsl(0 72% 40% / 0.2),
+      0 1px 2px hsl(220 25% 10% / 0.04),
+      0 8px 16px -4px hsl(0 72% 40% / 0.1),
+      0 24px 48px -12px hsl(0 72% 40% / 0.15);
+  }
+
+  .shadow-elevated {
+    box-shadow:
+      0 0 0 1px hsl(220 13% 91% / 0.5),
+      0 2px 4px hsl(220 25% 10% / 0.02),
+      0 8px 24px -4px hsl(220 25% 10% / 0.06),
+      0 24px 60px -12px hsl(220 25% 10% / 0.1);
+  }
+
+  .shadow-header {
+    box-shadow:
+      0 1px 0 hsl(220 13% 91% / 0.5),
+      0 4px 20px -4px hsl(220 25% 10% / 0.08);
+  }
+
+  .shadow-glow {
+    box-shadow:
+      0 0 20px hsl(0 72% 40% / 0.15),
+      0 0 60px hsl(0 72% 40% / 0.08);
+  }
+
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(0, 72%, 40%), hsl(0, 65%, 48%));
+  }
+
+  .gradient-cta {
+    background: linear-gradient(135deg, hsl(0, 72%, 36%), hsl(0, 65%, 45%), hsl(0, 72%, 40%));
+    background-size: 200% 200%;
+    animation: gradient-shift 8s ease infinite;
+  }
+
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  .line-accent {
+    position: relative;
+  }
+  .line-accent::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 48px;
+    height: 3px;
+    background: linear-gradient(90deg, hsl(0, 72%, 40%), hsl(0, 65%, 55%));
+    border-radius: 2px;
+  }
+}
