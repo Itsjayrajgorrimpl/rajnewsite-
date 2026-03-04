@@ -10,7 +10,7 @@ title: string;
 content: string;
 icon: string;
 sort_order: number;
-page_slug: string;
+page_slug: string; 
 }
 
 const AdminPageSections = () => {
