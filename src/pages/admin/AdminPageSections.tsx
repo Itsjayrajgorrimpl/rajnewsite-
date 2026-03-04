@@ -22,9 +22,9 @@ const { data } = await supabase
 .select("*")
 .order("sort_order", { ascending: true });
 
-```
+
 if (data) setSections(data as Section[]);
-```
+
 
 };
 
@@ -38,15 +38,15 @@ await supabase
 .update({ [field]: value })
 .eq("id", id);
 
-```
+
 loadSections();
-```
+
 
 };
 
 return ( <div className="container max-w-3xl py-10"> <h1 className="mb-6 text-2xl font-bold">Page Sections</h1>
 
-```
+
   <div className="space-y-6">
     {sections.map((s) => (
       <div key={s.id} className="rounded-xl border p-6">
@@ -83,7 +83,7 @@ return ( <div className="container max-w-3xl py-10"> <h1 className="mb-6 text-2x
     ))}
   </div>
 </div>
-```
+
 
 );
 };
