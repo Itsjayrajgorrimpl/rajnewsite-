@@ -37,6 +37,7 @@ import AdminTestimonials from "./pages/admin/AdminTestimonials";
 import AdminBlog from "./pages/admin/AdminBlog";
 import AdminProducts from "./pages/admin/AdminProducts";
 import NotFound from "./pages/NotFound";
+import AdminPageSections from "./pages/admin/AdminPageSections";
 
 const queryClient = new QueryClient();
 
