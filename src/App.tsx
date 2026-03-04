@@ -29,7 +29,7 @@ import ChemicalProcess from "./pages/industries/ChemicalProcess";
 import UtilityInfrastructure from "./pages/industries/UtilityInfrastructure";
 import BlogListing from "./pages/BlogListing";
 import BlogPostPage from "./pages/BlogPost";
-import AdminLogin from "./pages/AdminLogin";
+import AdminLogin from "./pages/admin/AdminLogin";
 import AdminOverview from "./pages/admin/AdminOverview";
 import AdminQuotes from "./pages/admin/AdminQuotes";
 import AdminBanners from "./pages/admin/AdminBanners";
